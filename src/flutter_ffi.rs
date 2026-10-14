@@ -1142,6 +1142,22 @@ pub fn main_get_version() -> String {
     get_version()
 }
 
+pub fn main_phonebook_list() -> String {
+    crate::phonebook::list_json()
+}
+
+pub fn main_phonebook_save(entry: String) -> bool {
+    crate::phonebook::save_json(&entry).is_ok()
+}
+
+pub fn main_phonebook_remove(id: String) -> bool {
+    crate::phonebook::remove(&id).is_ok()
+}
+
+pub fn main_phonebook_import(data: String) -> i32 {
+    crate::phonebook::import_json(&data).map_or(-1, |n| n as i32)
+}
+
 pub fn main_get_fav() -> Vec<String> {
     get_fav()
 }

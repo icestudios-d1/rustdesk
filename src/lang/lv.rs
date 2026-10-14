@@ -813,5 +813,10 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("shortcut-key-not-supported", ""),
         ("On", ""),
         ("Off", ""),
+        ("Add machine", ""),
+        ("Edit machine", ""),
+        ("Import machines", ""),
+        ("Phonebook", ""),
+        ("phonebook_import_tip", ""),
     ].iter().cloned().collect();
 }

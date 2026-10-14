@@ -1100,6 +1100,17 @@ class RustdeskImpl {
     throw UnimplementedError("mainGetNewStoredPeers");
   }
 
+  Future<String> mainPhonebookList({dynamic hint}) => Future.value('[]');
+
+  Future<bool> mainPhonebookSave({required String entry, dynamic hint}) =>
+      Future.value(false);
+
+  Future<bool> mainPhonebookRemove({required String id, dynamic hint}) =>
+      Future.value(false);
+
+  Future<int> mainPhonebookImport({required String data, dynamic hint}) =>
+      Future.value(-1);
+
   Future<void> mainForgetPassword({required String id, dynamic hint}) {
     return mainSetPeerOption(id: id, key: 'password', value: '');
   }
